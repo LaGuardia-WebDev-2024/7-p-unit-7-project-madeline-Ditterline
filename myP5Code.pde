@@ -4,14 +4,30 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-
-
+var pupilHeight = 100;
+var opacity = 0;
+var X = 300;
+var Y = 200;
+irisHeight = 200;
+scleraHeight = 275;
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
-  background(255,255,255,0);
-  
+  background(255,255,255,opacity);
 
+triangle(eyeTop1X,eyeTop2Y,eyeTop2X,eyeTop2Y,eyeTop3X,eyeTop3y);
+
+
+stroke(255,255,255);
+fill(255,255,255);
+ellipse(X,Y,275,scleraHeight);
+
+stroke(25,138,46);
+fill(25, 138, 46);
+ellipse(X,Y,200,irisHeight);
+
+  fill(1,1,1);
+ellipse(X,Y,100,pupilHeight);
 
 
 
