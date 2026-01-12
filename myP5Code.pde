@@ -4,22 +4,27 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var pupilHeight = 100;
+var pupilHeight = 0;
 var opacity = 0;
 var X = 300;
 var Y = 200;
-irisHeight = 200;
+irisHeight = 0;
 scleraHeight = 275;
+var eYe1 = 83;
+var eYe2 = 317;
+
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
-  background(255,255,255,opacity);
+  background(1,1,1,opacity);
 
-triangle(eyeTop1X,eyeTop2Y,eyeTop2X,eyeTop2Y,eyeTop3X,eyeTop3y);
+
 
 
 stroke(255,255,255);
 fill(255,255,255);
+triangle(228,eYe1,228,eYe2,48,200);
+triangle(373,eYe1,373,eYe2,554,200);
 ellipse(X,Y,275,scleraHeight);
 
 stroke(25,138,46);
@@ -29,9 +34,14 @@ ellipse(X,Y,200,irisHeight);
   fill(1,1,1);
 ellipse(X,Y,100,pupilHeight);
 
-
-
-
+pupilHeight = pupilHeight + 1;
+if(pupilHeight > 100){
+  pupilHeight = pupilHeight - 1
+}
+irisHeight = irisHeight + 1;
+if (irisHeight > 200){
+  irisHeight = irisHeight - 1
+}
   //Show x y values when mousepressed
   if(mousePressed){showXYPositions();}
 
