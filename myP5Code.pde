@@ -50,9 +50,10 @@ stroke(1,1,1,closedeye);
 strokeWeight(2);
 line(48,200,554,200);
 
-if(timer > 250){
+if(timer > 180){
 
 //i wanted it to like blink but i cant reset it
+//eyeopens
 pupilHeight = pupilHeight + 1;
 if(pupilHeight > 100){
   pupilHeight = pupilHeight - 1
@@ -73,10 +74,12 @@ eYe2 = eYe2 + 1.15;
 if (eYe2 > 317){
   eYe2 = eYe2 - 1.15;
 }
+//skydarkens
 opacity = opacity + 2;
 if(opacity > 750){
   opacity = opacity - 2
 }
+//eyeliddisappears
 closedeye = closedeye - 1000;
 }
   //Show x y values when mousepressed
